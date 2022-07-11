@@ -1,3 +1,5 @@
+# Listing Directories
+
 # Serving Static Pages
 # serving pages from the disk instead of generating them on the fly. We'll start by rewriting do_GET
 
@@ -27,7 +29,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             # If it is something we don't handle
             else:
                 raise ServerException("Unknown object '{0}'".format(self.path))
-            
+
         # Handle errors.
         except ServerException as msg:
             self.handle_error(msg)
