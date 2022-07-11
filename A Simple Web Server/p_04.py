@@ -75,6 +75,8 @@ class RequestHandler(BaseHTTPRequestHandler):
     If anything goes wrong, an error page is constructed.
     '''
 
+    # modify original code, to remove '()'
+
     Cases = [CaseNoFile,
              CaseExistingFile,
              CaseDirectoryIndexFile,
@@ -88,6 +90,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
             for case in self.Cases:
                 handler = case()
+                # below 'self' meant to RequestHandler object, rather than handler=case()
                 if handler.test(self):
                     handler.act(self)
                     break
