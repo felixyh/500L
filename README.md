@@ -1,7 +1,6 @@
-# 500L
-500 lines or less
+## 500 lines or less
 
-A Simple Web Server
-Author: Greg Wilson
+### A Simple Web Server
+- Author: Greg Wilson
 
-http://aosabook.org/en/500L/a-simple-web-server.html
+- http://aosabook.org/en/500L/a-simple-web-server.html
