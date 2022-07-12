@@ -21,7 +21,7 @@ class CaseNoFile:
 
 
 class CaseExistingFile:
-    '''File exists.'''
+    """File exists."""
 
     def test(self, handler):
         return os.path.isfile(handler.full_path)
@@ -31,7 +31,7 @@ class CaseExistingFile:
 
 
 class CaseAlwaysFail:
-    '''Base case if nothing else worked.'''
+    """Base case if nothing else worked."""
 
     def test(self, handler):
         return True
@@ -41,7 +41,7 @@ class CaseAlwaysFail:
 
 
 class CaseDirectoryIndexFile:
-    '''Serve index.html page for a directory.'''
+    """Serve index.html page for a directory."""
 
     def index_path(self, handler):
         return os.path.join(handler.full_path, 'index.html')
@@ -55,7 +55,7 @@ class CaseDirectoryIndexFile:
 
 
 class CaseDirectoryNoIndexFile:
-    '''Serve listing for a directory without an index.html page.'''
+    """Serve listing for a directory without an index.html page."""
 
     def index_path(self, handler):
         return os.path.join(handler.full_path, 'index.html')
@@ -70,10 +70,10 @@ class CaseDirectoryNoIndexFile:
 
 class RequestHandler(BaseHTTPRequestHandler):
 
-    '''
+    """
     If the requested path maps to a file, that file is served.
     If anything goes wrong, an error page is constructed.
-    '''
+    """
 
     # modify original code, to remove '()'
 
